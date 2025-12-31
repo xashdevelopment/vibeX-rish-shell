@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="utf="8"?>
-<!-- Material Design 3 Dialog Background -->
+<?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    
-    <!-- MD3 Surface Container High -->
     <solid android:color="@color/md3_surface_container_high" />
-    
-    <!-- MD3 Extra large corners for dialogs -->
-    <corners android:radius="@dimen/md3_corner_extra_large" />
+    <corners android:radius="28dp" />
 </shape>

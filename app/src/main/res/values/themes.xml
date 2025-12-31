@@ -1,11 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
-    <style name="Base.Theme.DefaultAppTheme" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/theme</item>
-        <item name="colorAccent">@color/theme</item>
-        <item name="android:background">@color/background_day</item>
+    <!-- Base application theme using standard Android SDK -->
+    <style name="Base.Theme.DefaultAppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">@color/md3_primary</item>
+        <item name="android:colorAccent">@color/md3_primary</item>
+        <item name="android:windowBackground">@color/md3_background</item>
     </style>
 
     <style name="Theme.DefaultAppTheme" parent="Base.Theme.DefaultAppTheme" />

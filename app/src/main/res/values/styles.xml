@@ -6,90 +6,10 @@
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:colorAccent">@color/colorAccent</item>
     </style>
-    
+
     <!-- Terminal theme for API < 21 -->
     <style name="TerminalTheme" parent="@android:style/Theme.Black">
         <item name="android:windowBackground">@color/terminalBackground</item>
         <item name="android:colorBackground">@color/terminalBackground</item>
-    </style>
-    
-    <!-- ============================================ -->
-    <!-- Material Design 3 Typography Styles -->
-    <!-- ============================================ -->
-    
-    <style name="MD3_DisplayLarge" parent="android:style/TextAppearance.Material3.DisplayLarge">
-        <item name="android:textSize">@dimen/md3_text_size_display_large</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_DisplayMedium" parent="android:style/TextAppearance.Material3.DisplayMedium">
-        <item name="android:textSize">@dimen/md3_text_size_display_medium</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_DisplaySmall" parent="android:style/TextAppearance.Material3.DisplaySmall">
-        <item name="android:textSize">@dimen/md3_text_size_display_small</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_HeadlineLarge" parent="android:style/TextAppearance.Material3.HeadlineLarge">
-        <item name="android:textSize">@dimen/md3_text_size_headline_large</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_HeadlineMedium" parent="android:style/TextAppearance.Material3.HeadlineMedium">
-        <item name="android:textSize">@dimen/md3_text_size_headline_medium</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-    </style>
-    
-    <style name="MD3_HeadlineSmall" parent="android:style/TextAppearance.Material3.HeadlineSmall">
-        <item name="android:textSize">@dimen/md3_text_size_headline_small</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_TitleLarge" parent="android:style/TextAppearance.Material3.TitleLarge">
-        <item name="android:textSize">@dimen/md3_text_size_title_large</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_TitleMedium" parent="android:style/TextAppearance.Material3.TitleMedium">
-        <item name="android:textSize">@dimen/md3_text_size_title_medium</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_TitleSmall" parent="android:style/TextAppearance.Material3.TitleSmall">
-        <item name="android:textSize">@dimen/md3_text_size_title_small</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_BodyLarge" parent="android:style/TextAppearance.Material3.BodyLarge">
-        <item name="android:textSize">@dimen/md3_text_size_body_large</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_BodyMedium" parent="android:style/TextAppearance.Material3.BodyMedium">
-        <item name="android:textSize">@dimen/md3_text_size_body_medium</item>
-        <item name="android:textColor">@color/md3_on_surface_variant</item>
-    </style>
-    
-    <!-- ============================================ -->
-    <!-- Material Design 3 Dialog Theme -->
-    <!-- ============================================ -->
-    
-    <style name="MD3_DialogTheme" parent="android:style/Theme.Material3.Dialog">
-        <item name="android:windowBackground">@drawable/md3_dialog_background</item>
-        <item name="android:windowTitleStyle">@style/MD3_DialogTitle</item>
-        <item name="android:buttonBarPositiveButtonStyle">@style/MD3_DialogButton</item>
-        <item name="android:buttonBarNegativeButtonStyle">@style/MD3_DialogButton</item>
-    </style>
-    
-    <style name="MD3_DialogTitle" parent="android:style/Widget.Material3.Dialog.Title">
-        <item name="android:textAppearance">@style/MD3_HeadlineMedium</item>
-        <item name="android:textColor">@color/md3_on_surface</item>
-    </style>
-    
-    <style name="MD3_DialogButton" parent="android:style/Widget.Material3.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/md3_primary</item>
     </style>
 </resources>
