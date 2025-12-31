@@ -74,9 +74,6 @@
     <color name="terminalText">#ffffffff</color>
     <color name="terminalHint">#ff888888</color>
     
-    <!-- Launcher icon colors -->
-    <color name="ic_launcher_background">#3F51B5</color>
-    
     <!-- Standard colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
