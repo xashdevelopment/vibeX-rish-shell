@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VibeX Rish Shell</string>
+    <string name="terminal_hint">Type commands here...</string>
+    <string name="send_button">SEND</string>
+    <string name="copy_to_clipboard">Output copied to clipboard</string>
+    <string name="shell_initializing">Waiting for rish to initialize...</string>
+    <string name="shell_started">Rish started via sh!</string>
+    <string name="error_shell_missing">rish files missing</string>
+    <string name="error_execution">Error executing command</string>
+</resources>

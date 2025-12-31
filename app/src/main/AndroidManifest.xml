@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App will be able to read data from shared storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    
+    <application
+        android:theme="@android:style/Theme.Black"
+        android:label="VibeX Rish Shell"
+        android:icon="@drawable/ic_launcher"
+        android:debuggable="true"
+        android:allowBackup="true"
+        tools:targetApi="31">
+
+        <activity
+            android:label="VibeX Rish Shell"
+            android:name=".RishShellActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Tasker plugin integration -->
+        <activity
+            android:name=".tasker.TaskerActivity"
+            android:exported="true"
+            android:label="VibeX Terminal"
+            android:theme="@android:style/Theme.Black">
+            <intent-filter>
+                <action android:name="com.twohlix.tasker.ACTION_RUN_TASK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+</manifest>

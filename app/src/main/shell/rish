@@ -1,0 +1,34 @@
+#!/system/bin/sh
+# VibeX Rish Shell Launcher Script
+# Launches the Shizuku shell with proper classpath configuration
+
+BASEDIR=$(dirname "$0")
+DEX="$BASEDIR"/rish_shizuku.dex
+
+if [ ! -f "$DEX" ]; then
+  echo "Cannot find $DEX, please check the tutorial in Shizuku app"
+  exit 1
+fi
+
+# Handle Android 14+ (API 34+) requirements
+# On Android 14+, app_process cannot load writable dex files
+if [ $(getprop ro.build.version.sdk) -ge 34 ]; then
+  if [ -w $DEX ]; then
+    echo "On Android 14+, app_process cannot load writable dex."
+    echo "Attempting to remove the write permission..."
+    chmod 400 $DEX
+  fi
+  if [ -w $DEX ]; then
+    echo "Cannot remove the write permission of $DEX."
+    echo "You can copy the file to terminal app's private directory (/data/data/<package>), so that removing write permission is possible"
+    exit 1
+  fi
+fi
+
+# Set application ID for the shell
+# This can be overridden by setting RISH_APPLICATION_ID environment variable
+[ -z "$RISH_APPLICATION_ID" ] && export RISH_APPLICATION_ID="com.vibe.termplugin"
+
+# Launch the Shizuku shell loader
+# app_process is used to run Java code without creating a full APK
+/system/bin/app_process -Djava.class.path="$DEX" /system/bin --nice-name=rish rikka.shizuku.shell.ShizukuShellLoader "$@"

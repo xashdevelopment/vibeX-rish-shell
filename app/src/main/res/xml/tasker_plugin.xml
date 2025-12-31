@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin
+    android:name="VibeX Terminal"
+    android:label="VibeX Terminal"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

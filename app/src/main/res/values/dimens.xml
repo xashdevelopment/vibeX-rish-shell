@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================ -->
+    <!-- Material Design 3 Dimension Tokens -->
+    <!-- ============================================ -->
+    
+    <!-- Spacing System (4dp baseline) -->
+    <dimen name="md3_spacing_xxs">2dp</dimen>
+    <dimen name="md3_spacing_xs">4dp</dimen>
+    <dimen name="md3_spacing_extra_small">6dp</dimen>
+    <dimen name="md3_spacing_small">8dp</dimen>
+    <dimen name="md3_spacing_medium">12dp</dimen>
+    <dimen name="md3_spacing_large">16dp</dimen>
+    <dimen name="md3_spacing_xl">24dp</dimen>
+    <dimen name="md3_spacing_xxl">32dp</dimen>
+    <dimen name="md3_spacing_xxxl">48dp</dimen>
+    
+    <!-- Touch Target Minimum -->
+    <dimen name="md3_touch_target_min">48dp</dimen>
+    
+    <!-- Corner Radius Tokens -->
+    <dimen name="md3_corner_none">0dp</dimen>
+    <dimen name="md3_corner_extra_small">4dp</dimen>
+    <dimen name="md3_corner_small">8dp</dimen>
+    <dimen name="md3_corner_medium">12dp</dimen>
+    <dimen name="md3_corner_large">16dp</dimen>
+    <dimen name="md3_corner_extra_large">28dp</dimen>
+    <dimen name="md3_corner_full">999dp</dimen>
+    
+    <!-- Elevation Tokens -->
+    <dimen name="md3_elevation_none">0dp</dimen>
+    <dimen name="md3_elevation_1">1dp</dimen>
+    <dimen name="md3_elevation_2">3dp</dimen>
+    <dimen name="md3_elevation_3">6dp</dimen>
+    <dimen name="md3_elevation_4">8dp</dimen>
+    <dimen name="md3_elevation_5">12dp</dimen>
+    
+    <!-- Typography Scale -->
+    <dimen name="md3_text_size_display_large">57sp</dimen>
+    <dimen name="md3_text_size_display_medium">45sp</dimen>
+    <dimen name="md3_text_size_display_small">36sp</dimen>
+    <dimen name="md3_text_size_headline_large">32sp</dimen>
+    <dimen name="md3_text_size_headline_medium">28sp</dimen>
+    <dimen name="md3_text_size_headline_small">24sp</dimen>
+    <dimen name="md3_text_size_title_large">22sp</dimen>
+    <dimen name="md3_text_size_title_medium">16sp</dimen>
+    <dimen name="md3_text_size_title_small">14sp</dimen>
+    <dimen name="md3_text_size_body_large">16sp</dimen>
+    <dimen name="md3_text_size_body_medium">14sp</dimen>
+    <dimen name="md3_text_size_body_small">12sp</dimen>
+    <dimen name="md3_text_size_label_large">14sp</dimen>
+    <dimen name="md3_text_size_label_medium">12sp</dimen>
+    <dimen name="md3_text_size_label_small">11sp</dimen>
+    
+    <!-- Component Heights -->
+    <dimen name="md3_component_height_button">40dp</dimen>
+    <dimen name="md3_component_height_fab">56dp</dimen>
+    <dimen name="md3_component_height_text_field">56dp</dimen>
+    <dimen name="md3_component_height_toolbar">64dp</dimen>
+    <dimen name="md3_component_height_bottom_nav">80dp</dimen>
+    
+    <!-- Icon Sizes -->
+    <dimen name="md3_icon_size_small">18dp</dimen>
+    <dimen name="md3_icon_size_medium">24dp</dimen>
+    <dimen name="md3_icon_size_large">36dp</dimen>
+    
+    <!-- Terminal Specific -->
+    <dimen name="terminal_text_size">14sp</dimen>
+    <dimen name="terminal_padding">16dp</dimen>
+    <dimen name="terminal_line_height">20dp</dimen>
+    <dimen name="terminal_input_height">48dp</dimen>
+</resources>

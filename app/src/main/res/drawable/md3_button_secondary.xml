@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Material Design 3 Secondary/Tonal Button -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/md3_state_layer">
+    
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/md3_secondary_container" />
+            <corners android:radius="@dimen/md3_corner_small" />
+        </shape>
+    </item>
+</ripple>

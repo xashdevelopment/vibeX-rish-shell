@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material theme for API 21+ -->
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">?android:colorPrimary</item>
+    </style>
+    
+    <!-- Terminal theme for API 21+ -->
+    <style name="TerminalTheme" parent="@android:style/Theme.Material">
+        <item name="android:windowBackground">@color/terminalBackground</item>
+        <item name="android:colorBackground">@color/terminalBackground</item>
+    </style>
+</resources>

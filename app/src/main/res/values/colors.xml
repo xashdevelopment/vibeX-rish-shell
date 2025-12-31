@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================ -->
+    <!-- Material Design 3 Color Tokens (Dark Theme) -->
+    <!-- ============================================ -->
+    
+    <!-- Primary -->
+    <color name="md3_primary">#D0BCFF</color>
+    <color name="md3_onPrimary">#381E72</color>
+    <color name="md3_primary_container">#4F378B</color>
+    <color name="md3_onPrimaryContainer">#EADDFF</color>
+    
+    <!-- Secondary -->
+    <color name="md3_secondary">#CCC2DC</color>
+    <color name="md3_onSecondary">#332D41</color>
+    <color name="md3_secondary_container">#4A4458</color>
+    <color name="md3_onSecondaryContainer">#E8DEF8</color>
+    
+    <!-- Tertiary -->
+    <color name="md3_tertiary">#EFB8C8</color>
+    <color name="md3_onTertiary">#492532</color>
+    <color name="md3_tertiary_container">#633B48</color>
+    <color name="md3_onTertiaryContainer">#FFD8E4</color>
+    
+    <!-- Error -->
+    <color name="md3_error">#F2B8B5</color>
+    <color name="md3_onError">#601410</color>
+    <color name="md3_error_container">#8C1D18</color>
+    <color name="md3_onErrorContainer">#F9DEDC</color>
+    
+    <!-- Background & Surface -->
+    <color name="md3_background">#1E1F22</color>
+    <color name="md3_onBackground">#E6E1E5</color>
+    <color name="md3_surface">#1E1F22</color>
+    <color name="md3_onSurface">#E6E1E5</color>
+    <color name="md3_surface_variant">#49454F</color>
+    <color name="md3_onSurfaceVariant">#CAC4D0</color>
+    
+    <!-- Surface Container Levels -->
+    <color name="md3_surface_container_lowest">#1E1F22</color>
+    <color name="md3_surface_container_low">#27282C</color>
+    <color name="md3_surface_container">#2B2D31</color>
+    <color name="md3_surface_container_high">#32353B</color>
+    <color name="md3_surface_container_highest">#3B3C42</color>
+    
+    <!-- Outline & Inverse -->
+    <color name="md3_outline">#938F99</color>
+    <color name="md3_outline_variant">#49454F</color>
+    <color name="md3_inverse_surface">#E6E1E5</color>
+    <color name="md3_inverse_onSurface">#313033</color>
+    <color name="md3_inverse_primary">#6750A4</color>
+    
+    <!-- State Layer (for ripples) -->
+    <color name="md3_state_layer">#1FE6E1E5</color>
+    
+    <!-- Scrim -->
+    <color name="md3_scrim">#000000</color>
+    
+    <!-- Terminal Specific -->
+    <color name="md3_terminal_text">#00FF00</color>
+    
+    <!-- ============================================ -->
+    <!-- Legacy Colors (Backward Compatibility) -->
+    <!-- ============================================ -->
+    
+    <!-- Primary colors -->
+    <color name="colorPrimary">#ff3f51b5</color>
+    <color name="colorPrimaryDark">#ff303f9f</color>
+    <color name="colorAccent">#ffff4081</color>
+    
+    <!-- Terminal theme colors -->
+    <color name="terminalBackground">#ff1a1a1a</color>
+    <color name="terminalInputBackground">#ff2d2d2d</color>
+    <color name="terminalText">#ffffffff</color>
+    <color name="terminalHint">#ff888888</color>
+    
+    <!-- Launcher icon colors -->
+    <color name="ic_launcher_background">#3F51B5</color>
+    
+    <!-- Standard colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
