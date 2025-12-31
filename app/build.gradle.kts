@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -13,20 +12,14 @@ android {
         targetSdk = 34
         versionName = "1.0"
         versionCode = 1
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        
+
         // ARMv7 Only Configuration
         ndk {
             abiFilters.addAll(listOf("armeabi-v7a"))
         }
-        
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
-    
+
     buildTypes {
-        // Debug build - fastest, no obfuscation
         debug {
             isDebuggable = true
             isMinifyEnabled = false
@@ -34,30 +27,19 @@ android {
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
         }
-        
-        // Release build - no minification for speed
+
         release {
             isDebuggable = false
             isMinifyEnabled = false
             isShrinkResources = false
         }
     }
-    
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    
-    kotlinOptions {
-        jvmTarget = "17"
-        freeCompilerArgs = listOf(
-            "-Xno-param-assertions",
-            "-Xno-call-assertions",
-            "-Xno-receiver-assertions",
-            "-Xopt-in=kotlin.RequiresOptIn"
-        )
-    }
-    
+
     // Configure external native build for CMake - ARMv7 optimized
     externalNativeBuild {
         cmake {
@@ -65,12 +47,7 @@ android {
             version = "3.22.1"
         }
     }
-    
-    buildFeatures {
-        buildConfig = true
-        viewBinding = true
-    }
-    
+
     // Disable unneeded features for speed
     packaging {
         jniLibs {
@@ -83,14 +60,14 @@ android {
             excludes += "META-INF/NOTICE*"
         }
     }
-    
+
     // Configure source sets for Java code
     sourceSets {
         getByName("main") {
             java.srcDirs("src/main/java")
         }
     }
-    
+
     // Lint configuration - skip for faster builds
     lint {
         abortOnError = false
@@ -100,16 +77,11 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+    google()
+}
+
 dependencies {
-    // Core Android dependencies
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    
-    // UI dependencies (keep minimal)
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    
-    // Testing
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    // NO EXTERNAL DEPENDENCIES - Pure Android SDK only
 }
