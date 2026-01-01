@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Dark theme using standard Android SDK -->
-    <style name="Base.Theme.DefaultAppTheme" parent="@android:style/Theme.Material.NoActionBar">
+    <!-- Dark theme using Material Design Components -->
+    <style name="Base.Theme.DefaultAppTheme" parent="@style/Theme.Material3.Dark.NoActionBar">
         <item name="android:background">@color/md3_background</item>
+        <!-- Required for colorControlNormal attribute used in drawables -->
+        <item name="colorControlNormal">@color/md3_onSurface</item>
     </style>
 </resources>
