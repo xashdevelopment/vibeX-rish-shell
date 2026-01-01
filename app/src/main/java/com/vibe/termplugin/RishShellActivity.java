@@ -62,9 +62,6 @@ public class RishShellActivity extends Activity {
     private DataOutputStream shellInputStream;
     private InputStream shellOutputStream;
 
-    // Native library integration
-    private MitreGramNative nativeBridge;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,15 +73,11 @@ public class RishShellActivity extends Activity {
         // Initialize ADRT logging with the debugger package
         ADRTLogCatReader.onContext(this, "com.aide.ui.crustacean");
 
-        // Initialize native library bridge
-        nativeBridge = new MitreGramNative();
-
         // Setup the custom UI
         setupUI();
 
-        // Load native QASM library and initialize welcome protocol
-        System.loadLibrary("QASM");
-        nativeBridge.initWelcomeProtocol(this);
+        // Show welcome dialog directly
+        showWelcomeDialog();
 
         // Copy shell files and start the shell
         executorService.execute(this::copyRishFilesAndStartShell);
@@ -498,8 +491,8 @@ public class RishShellActivity extends Activity {
     }
 
     /**
-     * Called from native code to show welcome dialog
-     * This method is invoked by the MitreGramNative library
+     * Show welcome dialog
+     * This method was previously invoked by the native library
      */
     public void showDialogFromNative() {
         uiHandler.post(new Runnable() {
@@ -516,7 +509,7 @@ public class RishShellActivity extends Activity {
     private void showWelcomeDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Welcome to VibeX Rish Shell");
-        builder.setMessage("You have successfully loaded the MitreGram native protocol.\n\n" +
+        builder.setMessage("You have successfully loaded the VibeX terminal.\n\n" +
                           "This shell provides full Shizuku integration for advanced terminal operations.\n\n" +
                           "Type 'help' to see available commands.");
         builder.setPositiveButton("Get Started", new DialogInterface.OnClickListener() {

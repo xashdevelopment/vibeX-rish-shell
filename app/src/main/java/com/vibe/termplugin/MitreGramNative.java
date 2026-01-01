@@ -2,13 +2,13 @@ package com.vibe.termplugin;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 /**
- * MitreGramNative - JNI Wrapper for libQASM.so (MitreGramNative)
+ * MitreGramNative - Java-only implementation
  *
- * This class provides the native interface to the MitreGram library
- * which handles dialogs, callbacks, and native utilities.
- * Pure Android SDK - NO EXTERNAL DEPENDENCIES
+ * Native library integration has been removed.
+ * All methods now provide stub implementations.
  */
 public class MitreGramNative {
 
@@ -18,11 +18,6 @@ public class MitreGramNative {
     private RishShellActivity activity;
     private Handler uiHandler;
 
-    // Load the native library
-    static {
-        System.loadLibrary("QASM");
-    }
-
     /**
      * Initialize the native library bridge
      * @param activity The activity to receive callbacks
@@ -30,23 +25,20 @@ public class MitreGramNative {
     public void init(RishShellActivity activity) {
         this.activity = activity;
         uiHandler = new Handler(Looper.getMainLooper());
-        nativeInit();
+        Log.d(TAG, "MitreGramNative initialized (Java-only mode)");
     }
 
     /**
      * Initialize the welcome protocol
-     * Called from RishShellActivity to trigger the native welcome dialog
      */
     public void initWelcomeProtocol(RishShellActivity activity) {
         this.activity = activity;
         uiHandler = new Handler(Looper.getMainLooper());
-        // This will trigger the native JNI_OnLoad which will call back to showDialogFromNative
-        nativeInit();
+        Log.d(TAG, "Welcome protocol initialized (Java-only mode)");
     }
 
     /**
-     * Called from native code to trigger the welcome dialog
-     * This is the callback method that native code invokes
+     * Called to trigger the welcome dialog
      */
     public void onShowWelcomeDialog() {
         if (uiHandler != null && activity != null) {
@@ -62,10 +54,11 @@ public class MitreGramNative {
     }
 
     /**
-     * Handle qers action from native code
-     * @param mode Action mode (0=exit, else=dismiss)
+     * Handle qers action
+     * @param mode Action mode
      */
     public void handleQersAction(int mode) {
+        Log.d(TAG, "handleQersAction called with mode: " + mode);
         if (mode == 0) {
             // Exit application
             android.os.Process.killProcess(android.os.Process.myPid());
@@ -73,38 +66,23 @@ public class MitreGramNative {
     }
 
     /**
-     * Show a dialog with title and message from native code
+     * Show a dialog with title and message
      */
     public void showMessage(String title, String message) {
-        nativeShowMessage(title, message);
+        Log.d(TAG, "showMessage: " + title + " - " + message);
     }
 
     /**
-     * Log a message from native code
+     * Log a message
      */
     public void log(String message) {
-        nativeLog(message);
+        Log.d(TAG, message);
     }
 
     /**
-     * Cleanup native resources
+     * Cleanup resources
      */
     public void cleanup() {
-        nativeCleanup();
-    }
-
-    // Native method declarations
-    private native void nativeInit();
-    private native void nativeShowMessage(String title, String message);
-    private native void nativeLog(String message);
-    private native void nativeCleanup();
-
-    /**
-     * Static method called from native code to trigger UI callback
-     * This is called via JNI when the native library wants to show the welcome dialog
-     */
-    private static void triggerWelcomeDialogCallback() {
-        // This will be called by native code
-        // The instance method onShowWelcomeDialog will be called instead
+        Log.d(TAG, "cleanup called (Java-only mode)");
     }
 }
