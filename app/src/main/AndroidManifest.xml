@@ -8,7 +8,7 @@
     <application
         android:theme="@android:style/Theme.Black"
         android:label="VibeX Rish Shell"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:debuggable="true"
         android:allowBackup="true"
         tools:targetApi="31">
