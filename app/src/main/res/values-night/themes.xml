@@ -1,8 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
-    <style name="Base.Theme.DefaultAppTheme" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-        <item name="android:background">@color/background_night</item>
+    <!-- Dark theme using standard Android SDK -->
+    <style name="Base.Theme.DefaultAppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:background">@color/md3_background</item>
     </style>
 </resources>
