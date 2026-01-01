@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme using Material Design Components -->
-    <style name="Base.Theme.DefaultAppTheme" parent="@style/Theme.Material3.NoActionBar">
+    <style name="Base.Theme.DefaultAppTheme" parent="@style/Theme.MaterialComponents.NoActionBar">
         <item name="android:colorPrimary">@color/md3_primary</item>
         <item name="android:colorAccent">@color/md3_primary</item>
         <item name="android:windowBackground">@color/md3_background</item>
