@@ -518,9 +518,9 @@ public class RishShellActivity extends Activity {
         builder.setMessage("You have successfully loaded the MitreGram native protocol.\n\n" +
                           "This shell provides full Shizuku integration for advanced terminal operations.\n\n" +
                           "Type 'help' to see available commands.");
-        builder.setPositiveButton("Get Started", new AlertDialog.OnClickListener() {
+        builder.setPositiveButton("Get Started", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(AlertDialog dialog, int which) {
+            public void onClick(DialogInterface dialog, int which) {
                 appendOutput("\nWelcome! Type 'help' to begin.\n\n");
             }
         });
