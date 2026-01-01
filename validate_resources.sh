@@ -36,10 +36,13 @@ validate_xml() {
         fi
     fi
     
-    # Check for uppercase characters in resource filenames
+    # Check for uppercase characters in resource filenames (not in manifest)
     local filename=$(basename "$file")
-    if [[ "$filename" =~ [A-Z] ]]; then
-        echo "ERROR: Uppercase in filename (Android requires lowercase)"
+    local dir=$(dirname "$file")
+    
+    # Only check for uppercase in resource filenames, not manifest
+    if [[ "$filename" =~ [A-Z] ]] && [[ "$dir" == *"res"* ]]; then
+        echo "ERROR: Uppercase in resource filename (Android requires lowercase)"
         ERRORS=$((ERRORS + 1))
         return 1
     fi
@@ -102,6 +105,25 @@ if [ -d "xml" ]; then
     for f in xml/*.xml; do
         [ -f "$f" ] && validate_xml "$f"
     done
+    echo ""
+fi
+
+# Check mipmap XMLs (adaptive icons)
+if [ -d "mipmap-anydpi-v26" ]; then
+    echo "--- Mipmap XMLs (Adaptive Icons) ---"
+    for f in mipmap-anydpi-v26/*.xml; do
+        [ -f "$f" ] && validate_xml "$f"
+    done
+    echo ""
+fi
+
+# Return to project root for manifest check
+cd "$PROJECT_DIR/app/src/main"
+
+# Check AndroidManifest.xml
+if [ -f "AndroidManifest.xml" ]; then
+    echo "--- Android Manifest ---"
+    validate_xml "AndroidManifest.xml"
     echo ""
 fi
 
